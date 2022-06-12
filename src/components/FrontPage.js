@@ -8,7 +8,7 @@ const FrontPage = () => {
     return (
         <Container className="shadow-lg p-5 mb-5 bg-white rounded mt-5">
             <div className={"mb-5"}>
-                <h1>Front page</h1>
+                <h1 className={"text-center"}>Harbour System</h1>
             </div>
 
 
