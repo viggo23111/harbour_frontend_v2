@@ -42,6 +42,8 @@ const UserBoats = () => {
             })
     }
 
+
+
     return (
         <div>
             <Container className="shadow-lg p-5 mb-5 bg-white rounded mt-5">

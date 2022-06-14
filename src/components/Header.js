@@ -26,21 +26,21 @@ const Header = ({logout}) => {
                         {
                             isAdmin &&
 
-                            <LinkContainer to="/admin1">
-                                <Nav.Link>Admin1</Nav.Link>
+                            <LinkContainer to="/adminboats">
+                                <Nav.Link>Boats</Nav.Link>
                             </LinkContainer>
 
                         }
                         {
                             isAdmin &&
-                            <LinkContainer to="/admin2">
-                                <Nav.Link>admin2</Nav.Link>
+                            <LinkContainer to="/addboat">
+                                <Nav.Link>Add boat</Nav.Link>
                             </LinkContainer>
                         }
                         {
                             isAdmin &&
-                            <LinkContainer to="/admin3">
-                                <Nav.Link>admin3</Nav.Link>
+                            <LinkContainer to="/addowner">
+                                <Nav.Link>Add owner</Nav.Link>
                             </LinkContainer>
                         }
 

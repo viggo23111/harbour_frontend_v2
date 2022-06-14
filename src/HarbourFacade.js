@@ -32,6 +32,32 @@ function HarbourFacade() {
         return fetch(URL + "/api/system/harbour/"+harbourID, options);
     }
 
+    const createBoat = (boat) => {
+        const options = makeOptions("POST", boat, true); //True add's the token
+        fetch(URL + "/api/system/createboat/", options).then(r => r.json());
+    }
+    const createOwner = (owner) => {
+        const options = makeOptions("POST", owner, true); //True add's the token
+        fetch(URL + "/api/system/createowner/", options).then(r => r.json());
+    }
+
+    const updateBoatHarbour = (boatID,harbourID) => {
+        const options = makeOptions("PUT",false,true); //True add's the token
+        return fetch(URL + "/api/system/boatconnectharbour/"+boatID+"/"+harbourID, options).then(r => r.json());
+    }
+
+    const removeOwnerFromBoat = (boatID,ownerID) => {
+        const options = makeOptions("PUT",false,true); //True add's the token
+        return fetch(URL + "/api/system/boatremoveowner/"+boatID+"/"+ownerID, options).then(r => r.json());
+    }
+
+    const addOwnerToBoat = (boatID,ownerID) => {
+        const options = makeOptions("PUT",false,true); //True add's the token
+        return fetch(URL + "/api/system/boataddowner/"+boatID+"/"+ownerID, options).then(r => r.json());
+    }
+
+
+
 /*
     const getRequestByCoachID = (coachID) => {
         const options = makeOptions("GET",false,true); //True add's the token
@@ -75,7 +101,12 @@ function HarbourFacade() {
         getHarbours,
         getBoatsByHarbourID,
         getBoatByID,
-        getBoatOwnersByBoatID
+        getBoatOwnersByBoatID,
+        createBoat,
+        updateBoatHarbour,
+        createOwner,
+        removeOwnerFromBoat,
+        addOwnerToBoat
     }
 }
 
